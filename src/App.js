@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Button from './Components/Common/Button/Button.js';
 import './App.css';
 
 class App extends Component {
@@ -31,12 +32,15 @@ class App extends Component {
     const {data} = this.state
     return (
       <div>
+        <h1 className="Greeting">Hello Levi </h1>
+        <h2 className="Title">Here the other users</h2>
         {data.map(user => (
           <ul className="Card" key={user.id}>
             <li>{user.name}</li>
             <li>{user.email}</li>
           </ul>
         ))}
+        <Button>Add a new user</Button>
       </div>
     );
   }

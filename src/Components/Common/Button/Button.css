@@ -1,0 +1,9 @@
+.ButtonWrapper {
+    padding: 0.5rem 1rem;
+    /* background-color: lightgreen; */
+}
+
+.Button {
+    font-size: 1em;
+    color: '#fff'
+}
