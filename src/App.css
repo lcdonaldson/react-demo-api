@@ -24,14 +24,23 @@
   color: white;
 }
 
+.BtnWrapper {
+  margin: 1rem auto;
+  padding: 0.5rem;
+  width: 80%;
+}
+
 .App-link {
   color: #61dafb;
 }
+
 .Greeting {
   text-align: right;
   margin-right: 1rem;
 }
-.Title { text-align: center;}
+
+.Title { text-align: center; }
+
 .Card {
   margin: 1rem auto;
   padding: 0.5rem;

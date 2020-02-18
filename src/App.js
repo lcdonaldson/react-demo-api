@@ -40,10 +40,16 @@ class App extends Component {
             <li>{user.email}</li>
           </ul>
         ))}
-        <Button>Add a new user</Button>
+        <div className="BtnWrapper">
+          <Button 
+            btnStyle="btn--success--solid"
+            btnSize="btn--md"
+          >Add a new user</Button>
+        </div>
       </div>
     );
   }
 }
+
 
 export default App;

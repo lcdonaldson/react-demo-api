@@ -1,9 +1,76 @@
-.ButtonWrapper {
-    padding: 0.5rem 1rem;
-    /* background-color: lightgreen; */
+:root {
+    --primary: #4628ff;
+    --secondary: #cccccc;
+    --warning: #ffd028;
+    --danger:#eb3f27;
+    --success: #46d229;
 }
 
-.Button {
+.btn {
+    margin-left: -0.5rem;
+    padding: 0.2rem;
+    font-family: "Copperplate Gothic", "san-serif";
+    font-weight: 400;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.btn:hover {
+    transform: translateX(0.2rem);
+    opacity: 0.7;
+}
+
+.btn--primary--solid {
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+}
+
+.btn--secondary--solid {
+    background-color: var(--secondary);
+    color: #fff;
+    border: none;
+}
+
+.btn--warning--solid {
+    background-color: var(--warning);
+    color: rgb(51, 50, 50);
+    border: none;
+}
+
+.btn--danger--solid {
+    background-color: var(--danger);
+    color: #fff;
+    border: none;
+}
+
+.btn--success--solid {
+    background-color: var(--success);
+    color: #fff;
+    border: none;
+}
+
+.btn--xs {
+    padding: 0.1rem 0.2rem;
+    font-size: 0.25em;
+}
+
+.btn--sm {
+    padding: 0.15rem 0.30rem;
+    font-size: 0.5em;
+}
+.btn--md {
+    padding: 0.25rem 0.50rem;
     font-size: 1em;
-    color: '#fff'
+}
+
+.btn--lg {
+    padding: 0.50rem 1rem;
+    font-size: 1.25em;
+}
+
+.btn--xl {
+    padding: 0.75rem 1.25rem;
+    font-size: 1.75em;
 }

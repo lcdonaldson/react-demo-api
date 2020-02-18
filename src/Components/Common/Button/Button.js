@@ -1,12 +1,47 @@
 import React from 'react';
 import './Button.css'
 
+const STYLES = [
+    "btn--primary--solid",
+    "btn--secondary--solid",
+    "btn--warning--solid",
+    "btn--danger--solid",
+    "btn--success--solid",
+    "btn--primary--outline",
+    "btn--secondary--outline",
+    "btn--warning--outline",
+    "btn--danger--outline",
+    "btn--success--outline",
+]
 
-const Button = () => {
+const SIZES = [
+    "btn--xs",
+    "btn--sm",
+    "btn--md",
+    "btn--lg",
+    "btn--xl"
+]
+
+const Button = ({
+    children, 
+    type, 
+    onClick,
+    btnStyle,
+    btnSize
+}) => {
+
+    const checkBtnStyle = STYLES.includes(btnStyle) 
+    ? btnStyle 
+    : STYLES[0];
+
+    const checkBtnSize = SIZES.includes(btnSize) ?
+        btnSize :
+        SIZES[0];
+
     return (
-        <div className="ButtonWrapper">
-            <p className="Button"></p>
-        </div>
+        <button className={`btn ${checkBtnStyle} ${checkBtnSize}`} onClick={onClick} type={type} >
+            {children}
+        </button>
     )
 }
 
