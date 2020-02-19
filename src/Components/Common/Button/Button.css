@@ -52,25 +52,30 @@
 }
 
 .btn--xs {
-    padding: 0.1rem 0.2rem;
-    font-size: 0.25em;
+    padding: 0.15rem 0.30rem;
+    font-size: 0.65em;
+    font-weight: 600;
 }
 
 .btn--sm {
-    padding: 0.15rem 0.30rem;
-    font-size: 0.5em;
+    padding: 0.30rem 0.60rem;
+    font-size: 0.80em;
+    font-weight: 600;
 }
 .btn--md {
-    padding: 0.25rem 0.50rem;
+    padding: 0.40rem 0.80rem;
     font-size: 1em;
+    font-weight: 600;
 }
 
 .btn--lg {
     padding: 0.50rem 1rem;
     font-size: 1.25em;
+    font-weight: 600;
 }
 
 .btn--xl {
     padding: 0.75rem 1.25rem;
     font-size: 1.75em;
+    font-weight: 600;
 }
