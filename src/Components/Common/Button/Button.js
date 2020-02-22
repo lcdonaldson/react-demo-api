@@ -30,16 +30,16 @@ const Button = ({
     btnSize
 }) => {
 
-    const checkBtnStyle = STYLES.includes(btnStyle) 
+    const customtnBtnStyle = STYLES.includes(btnStyle) 
     ? btnStyle 
     : STYLES[0];
 
-    const checkBtnSize = SIZES.includes(btnSize) ?
+    const customBtnSize = SIZES.includes(btnSize) ?
         btnSize :
         SIZES[0];
 
     return (
-        <button className={`btn ${checkBtnStyle} ${checkBtnSize}`} onClick={onClick} type={type} >
+        <button className={`btn ${customBtnStyle} ${customBtnSize}`} onClick={onClick} type={type} >
             {children}
         </button>
     )
