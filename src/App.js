@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Button from './Components/Common/Button/Button.js';
+import Card from './Components/Common/Card/Card.js';
 import './App.css';
 
 class App extends Component {
@@ -35,10 +36,12 @@ class App extends Component {
         <h1 className="Greeting">Hello Levi </h1>
         <h2 className="Title">Here the other users</h2>
         {data.map(user => (
-          <ul className="Card" key={user.id}>
-            <li>{user.name}</li>
-            <li>{user.email}</li>
-          </ul>
+          <Card
+            key={user.id}
+            // id={user.id}
+            name={user.name}
+            email={user.email}
+          />
         ))}
         <div className="BtnWrapper">
           <Button 
@@ -51,5 +54,5 @@ class App extends Component {
   }
 }
 
-
 export default App;
+

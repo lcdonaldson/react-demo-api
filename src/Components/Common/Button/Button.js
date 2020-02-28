@@ -1,5 +1,5 @@
 import React from 'react';
-import './Button.css'
+import './Button.css';
 
 const STYLES = [
     "btn--primary--solid",
@@ -30,7 +30,7 @@ const Button = ({
     btnSize
 }) => {
 
-    const customtnBtnStyle = STYLES.includes(btnStyle) 
+    const customBtnStyle = STYLES.includes(btnStyle) 
     ? btnStyle 
     : STYLES[0];
 

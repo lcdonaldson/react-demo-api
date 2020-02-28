@@ -1,0 +1,12 @@
+
+
+.Card {
+    margin: 1rem auto;
+    padding: 0.5rem;
+    background-color: var(--secondary);
+    min-height: 4rem;
+    width: 80%;
+    border: 2px solid "#f7f7f7";
+    border-radius: 4px;
+    list-style-type: none;
+}
