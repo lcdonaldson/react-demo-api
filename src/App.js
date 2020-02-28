@@ -37,6 +37,8 @@ class App extends Component {
         <h2 className="Title">Here the other users</h2>
         {data.map(user => (
           <Card
+            cardStyle="card--primary--outline"
+            // cardSize="card--md"
             key={user.id}
             // id={user.id}
             name={user.name}
@@ -45,7 +47,7 @@ class App extends Component {
         ))}
         <div className="BtnWrapper">
           <Button 
-            btnStyle="btn--success--solid"
+            btnStyle="btn--success--outline"
             btnSize="btn--md"
           >Add a new user</Button>
         </div>

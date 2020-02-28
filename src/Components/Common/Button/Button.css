@@ -51,6 +51,13 @@
     border: none;
 }
 
+.btn--success--outline {
+    background-color: #fff;
+    border-color: var(--success);
+    color: var(--success);
+    border: 2px solid var(--success);
+}
+
 .btn--xs {
     padding: 0.15rem 0.30rem;
     font-size: 0.65em;
