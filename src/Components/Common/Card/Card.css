@@ -27,8 +27,14 @@
     color: var(--primary);
     border: 2px solid var(--primary);
     border-color: var(--primary);
+    position: relative;
 }
 /* .card--secondary--outline
 .card--warning--outline
 .card--danger--outline
 .card--success--outline {} */
+.close {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}

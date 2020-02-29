@@ -41,7 +41,14 @@
 
 .Title { text-align: center; }
 
-
+.toastStyle {
+  background-color: rgba(0,0,0,0.38);
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+  visibility: hidden;
+}
 
 @keyframes App-logo-spin {
   from {

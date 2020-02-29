@@ -25,6 +25,7 @@ const STYLES = [
 const Card = (
   props,
   cardStyle,
+  onClick
   // cardSize
 ) => {
 
@@ -43,6 +44,7 @@ const Card = (
         <li>{props.name}</li>
         <li>{props.email}</li>
       </ul>
+      <button className="close" onClick={props.onClick}>X</button>
     </div>
   )
 }
