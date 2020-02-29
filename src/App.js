@@ -15,7 +15,7 @@ class App extends Component {
     this.getUsers()
   }
 
-  async getUsers() {
+  getUsers = async () => {
     const response = await fetch('http://localhost:3300/users/', {
       headers: {
         'Access-Control-Allow-Origin': '*',
@@ -27,6 +27,10 @@ class App extends Component {
     this.setState({
       data: json
     });
+  }
+
+  addUser = async () => {
+    console.log('clicked');
   }
 
   render() {
@@ -49,6 +53,7 @@ class App extends Component {
           <Button 
             btnStyle="btn--success--outline"
             btnSize="btn--md"
+            onClick={this.addUser}
           >Add a new user</Button>
         </div>
       </div>
