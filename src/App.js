@@ -97,7 +97,7 @@ class App extends Component {
         <h2 className="Title">Here the users</h2>
         <p id="toast" className="toastStyle">{toastMessage}</p>
 
-        <div className="BtnWrapper">
+        <div className="form-wrapper">
           <div>
             <label>Name</label>
             <input
@@ -114,12 +114,13 @@ class App extends Component {
               name="name"
               placeholder="Name"></input>
           </div>
-
-          <Button 
-            btnStyle="btn--success--outline"
-            btnSize="btn--md"
-            onClick={this.addUser}
-          >Add a new user</Button>
+          <div className="btn-wrapper">
+            <Button
+              btnStyle="btn--success--outline"
+              btnSize="btn--sm"
+              onClick={this.addUser}
+            >Add a new user</Button>
+          </div>
         </div>
 
         {data.map(user => (

@@ -24,11 +24,22 @@
   color: white;
 }
 
-.BtnWrapper {
+.form-wrapper {
   margin: 1rem auto;
   padding: 0.5rem;
   width: 80%;
+  display: flex;
+  flex-wrap: wrap;
 }
+.form-wrapper > div { 
+  flex: 1; 
+  text-align: center; 
+  height: 3rem; 
+  line-height: 3rem;
+  white-space: nowrap;
+}
+
+.btn-wrapper {min-width: 12rem; }
 
 .App-link {
   color: #61dafb;
