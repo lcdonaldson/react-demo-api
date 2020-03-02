@@ -7,7 +7,8 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      data: []
+      data: [],
+      toastMessage: ""
     };
   }
 
@@ -53,6 +54,7 @@ class App extends Component {
         email: email
       })
     }
+    this.setState({ toastMessage: "New User Added" });
     await fetch(url, config)
       .then(response => {
         if (!response.status === 200 || !response.status === 201) {
@@ -63,32 +65,55 @@ class App extends Component {
       });
   }
 
-  deleteUser = async () => {
-    console.log('hey');
+  deleteUser = (id) => {
+    // console.log(id)
+    const url = `http://localhost:3300/users/${id}`
+    const config = {
+      method: 'DELETE',
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+        'Accept': 'application/json;'
+      },
+      body: JSON.stringify({
+        id: id
+      })
+    }
+    this.setState({ toastMessage: "User Deleted" });
+    fetch(url, config)
+      .then((response) => {
+        return response;
+      }).then(() => {
+        return this.returnToast();
+      });
   }
 
   render() {
-    const {data} = this.state
+    const {data, toastMessage} = this.state
+
     return (
       <div>
         <h1 className="Greeting">Hello Levi </h1>
         <h2 className="Title">Here the users</h2>
-        <p id="toast" className="toastStyle">Added new user</p>
+        <p id="toast" className="toastStyle">{toastMessage}</p>
 
         <div className="BtnWrapper">
-          <label>Name</label>
-          <input
-            id="name"
-            type="text"
-            name="name"
-            placeholder="Name"></input>
-
-          <label>Email</label>
-          <input
-            id="email"
-            type="text"
-            name="name"
-            placeholder="Name"></input>
+          <div>
+            <label>Name</label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Name"></input>
+          </div>
+          <div>
+            <label>Email</label>
+            <input
+              id="email"
+              type="text"
+              name="name"
+              placeholder="Name"></input>
+          </div>
 
           <Button 
             btnStyle="btn--success--outline"
@@ -102,10 +127,10 @@ class App extends Component {
             cardStyle="card--primary--outline"
             // cardSize="card--md"
             key={user.id}
-            // id={user.id}
+            id={user.id}
             name={user.name}
             email={user.email}
-            onClick={this.deleteUser}
+            onClick={() => {this.deleteUser(user.id)}}
           />
         ))}
       </div>
