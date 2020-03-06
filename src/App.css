@@ -39,7 +39,7 @@
   line-height: 2rem;
   white-space: nowrap;
 }
-
+label { padding: 0 0.5em }
 .btn-wrapper {
   min-width: 12rem;
   margin-left: 0.2rem;

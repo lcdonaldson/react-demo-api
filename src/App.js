@@ -54,15 +54,16 @@ class App extends Component {
         email: email
       })
     }
-    this.setState({ toastMessage: "New User Added" });
     await fetch(url, config)
-      .then(response => {
-        if (!response.status === 200 || !response.status === 201) {
-          throw Error(response.message);
-        } else {
-          return this.returnToast();
-        }
-      });
+    .then(response => {
+      if (!response.status === 200 || !response.status === 201) {
+        throw Error(response.message);
+      } else {
+        return this.returnToast();
+      }
+    });
+    this.setState({ toastMessage: "New User Added" });
+    this.getUsers();
   }
 
   deleteUser = (id) => {
@@ -79,13 +80,16 @@ class App extends Component {
         id: id
       })
     }
-    this.setState({ toastMessage: "User Deleted" });
+    
     fetch(url, config)
       .then((response) => {
         return response;
-      }).then(() => {
+      })
+      .then(() => {
+        this.setState({ toastMessage: "User Deleted"});
         return this.returnToast();
       });
+      
   }
 
   render() {
