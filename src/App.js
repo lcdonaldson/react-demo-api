@@ -67,7 +67,6 @@ class App extends Component {
   }
 
   deleteUser = (id) => {
-    // console.log(id)
     const url = `http://localhost:3300/users/${id}`
     const config = {
       method: 'DELETE',
@@ -83,13 +82,12 @@ class App extends Component {
     
     fetch(url, config)
       .then((response) => {
+        // console.log('data: ' + JSON.stringify(this.state.data, null, 2));
         return response;
       })
-      .then(() => {
-        this.setState({ toastMessage: "User Deleted"});
-        return this.returnToast();
-      });
-      
+      this.setState({ toastMessage: "User Deleted"});
+      this.returnToast();
+      this.getUsers();
   }
 
   render() {
