@@ -4,6 +4,7 @@
     --warning: #ffd028;
     --danger:#eb3f27;
     --success: #46d229;
+    --white: #ffffff;
 }
 
 .btn {
@@ -24,13 +25,13 @@
 
 .btn--primary--solid {
     background-color: var(--primary);
-    color: #fff;
+    color: var(--white);
     border: none;
 }
 
 .btn--secondary--solid {
     background-color: var(--secondary);
-    color: #fff;
+    color: var(--white);
     border: none;
 }
 
@@ -42,18 +43,18 @@
 
 .btn--danger--solid {
     background-color: var(--danger);
-    color: #fff;
+    color: var(--white);
     border: none;
 }
 
 .btn--success--solid {
     background-color: var(--success);
-    color: #fff;
+    color: var(--white);
     border: none;
 }
 
 .btn--success--outline {
-    background-color: #fff;
+    background-color: var(--white);
     border-color: var(--success);
     color: var(--success);
     border: 2px solid var(--success);
