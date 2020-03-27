@@ -7,7 +7,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      data: [],
+      users: [],
       toastMessage: ""
     };
   }
@@ -33,7 +33,7 @@ class App extends Component {
     })
     const json = await response.json();
     this.setState({
-      data: json
+      users: json
     });
   }
 
@@ -82,7 +82,7 @@ class App extends Component {
     
     fetch(url, config)
       .then((response) => {
-        // console.log('data: ' + JSON.stringify(this.state.data, null, 2));
+        // console.log('users: ' + JSON.stringify(this.state.users, null, 2));
         return response;
       })
       this.setState({ toastMessage: "User Deleted"});
@@ -91,7 +91,7 @@ class App extends Component {
   }
 
   render() {
-    const {data, toastMessage} = this.state
+    const {users, toastMessage} = this.state
 
     return (
       <div>
@@ -125,7 +125,7 @@ class App extends Component {
           </div>
         </div>
 
-        {data.map(user => (
+        {users.map(user => (
           <Card
             cardStyle="card--primary--outline"
             // cardSize="card--md"
