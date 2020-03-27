@@ -68,6 +68,9 @@ class App extends Component {
 
   deleteUser = (id) => {
     const url = `http://localhost:3300/users/${id}`
+    const {users} = this.state;
+    const index = users.findIndex(user => user.id === id);
+
     const config = {
       method: 'DELETE',
       headers: {
@@ -81,13 +84,15 @@ class App extends Component {
     }
     
     fetch(url, config)
-      .then((response) => {
-        // console.log('users: ' + JSON.stringify(this.state.users, null, 2));
-        return response;
-      })
+      .then((response) => {return response;})
+
+      if (index === -1) return;
+
+      users.splice(index, 1);
+
+      this.setState(users);
       this.setState({ toastMessage: "User Deleted"});
       this.returnToast();
-      this.getUsers();
   }
 
   render() {
