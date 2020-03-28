@@ -87,11 +87,9 @@ class App extends Component {
       .then((response) => {return response;})
 
       if (index === -1) return;
-
       users.splice(index, 1);
 
-      this.setState(users);
-      this.setState({ toastMessage: "User Deleted"});
+      this.setState({ users, toastMessage: "User Deleted"});
       this.returnToast();
   }
 
@@ -130,17 +128,19 @@ class App extends Component {
           </div>
         </div>
 
-        {users.map(user => (
-          <Card
-            cardStyle="card--primary--outline"
+        <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
+          {users.map(user => (
+            <Card
+              cardStyle="card--primary--outline"
             // cardSize="card--md"
-            key={user.id}
-            id={user.id}
-            name={user.name}
-            email={user.email}
-            onClick={() => {this.deleteUser(user.id)}}
-          />
-        ))}
+              key={user.id}
+              id={user.id}
+              name={user.name}
+              email={user.email}
+              onClick={() => {this.deleteUser(user.id)}}
+            />
+          ))}
+        </div>
       </div>
     );
   }
