@@ -44,7 +44,7 @@ const Card = (
         <li>{props.name}</li>
         <li>{props.email}</li>
       </ul>
-      <button className="close" onClick={props.onClick}>X</button>
+      <button className="exitBtn exitBtnColor close" onClick={props.onClick}>X</button>
     </div>
   )
 }
