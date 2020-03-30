@@ -14,13 +14,13 @@ const STYLES = [
   "card--success--outline",
 ]
 
-// const SIZES = [
-//   "card--xs",
-//   "card--sm",
-//   "card--md",
-//   "card--lg",
-//   "card--xl"
-// ]
+const SIZES = [
+  "card--xs",
+  "card--sm",
+  "card--md",
+  "card--lg",
+  "card--xl"
+]
 
 const Card = (
   props,
