@@ -131,7 +131,7 @@ class App extends Component {
         <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
           {users.map(user => (
             <Card
-              cardStyle="card--primary--outline"
+              cardStyle="card--primary--outline br4"
             // cardSize="card--md"
               key={user.id}
               id={user.id}

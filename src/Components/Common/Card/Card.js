@@ -25,6 +25,7 @@ const SIZES = [
 const Card = (
   props,
   cardStyle,
+  br4,
   onClick
   // cardSize
 ) => {
@@ -38,7 +39,7 @@ const Card = (
   //   SIZES[0];
 
   return (
-    <div className={`card ${customCardStyle}`} >
+    <div className={br4, `card ${customCardStyle}`} >
       <ul>
         <li>{props.id}</li>
         <li>{props.name}</li>
