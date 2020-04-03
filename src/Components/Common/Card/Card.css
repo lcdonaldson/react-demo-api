@@ -5,12 +5,12 @@
     --danger:#eb3f27;
     --success: #46d229;
 }
-.br4 { border-radius: 4px; }
+.br4 { border-radius: 0.25rem; }
 .card {
     margin: 1rem auto;
     padding: 0.5rem;
-    min-width: 300px;
-    max-width: 300px;
+    min-width: 18.75rem;
+    max-width: 18.75rem;
     flex: 1;
     /* width: 80%; */
     /* list-style-type: none; */
