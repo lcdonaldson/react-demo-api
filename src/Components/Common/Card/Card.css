@@ -4,6 +4,7 @@
     --warning: #ffd028;
     --danger:#eb3f27;
     --success: #46d229;
+    --white: #ffffff;
 }
 .br4 { border-radius: 0.25rem; }
 .card {
@@ -18,7 +19,7 @@
 
 .card--primary--solid {
     background-color: var(--primary);
-    color: #fff;
+    color: var(--white);
     border: none;
 }
 /* .card--secondary--solid
