@@ -130,6 +130,7 @@ class App extends Component {
 
         <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
           {users.map(user => (
+            <div style={{flex: 1}}>
             <Card
               cardStyle="card--primary--outline br4"
             // cardSize="card--md"
@@ -139,6 +140,7 @@ class App extends Component {
               email={user.email}
               onClick={() => {this.deleteUser(user.id)}}
             />
+            </div>
           ))}
         </div>
       </div>
