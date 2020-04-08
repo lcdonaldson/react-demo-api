@@ -138,7 +138,7 @@ class App extends Component {
               id={user.id}
               name={user.name}
               email={user.email}
-              onClick={() => {this.deleteUser(user.id)}}
+              exit={() => {this.deleteUser(user.id)}}
             />
             </div>
           ))}

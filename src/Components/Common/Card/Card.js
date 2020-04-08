@@ -26,7 +26,6 @@ const Card = (
   props,
   cardStyle,
   br4,
-  onClick
   // cardSize
 ) => {
 
@@ -45,7 +44,7 @@ const Card = (
         <li>{props.name}</li>
         <li>{props.email}</li>
       </ul>
-      <button className="exitBtn exitBtnColor close" onClick={props.onClick}>X</button>
+      <button className="exitBtn exitBtnColor close" onClick={props.exit}>X</button>
     </div>
   )
 }
