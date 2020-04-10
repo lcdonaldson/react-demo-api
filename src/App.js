@@ -3,6 +3,8 @@ import Button from './Components/Common/Button/Button.js';
 import Card from './Components/Common/Card/Card.js';
 import './App.css';
 
+// TODO: Soon app with be changed to functional component
+
 class App extends Component {
   constructor(props){
     super(props);
