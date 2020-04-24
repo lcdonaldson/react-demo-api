@@ -6,6 +6,8 @@ import './App.css';
 // TODO: Soon app with be changed to functional component
 
 class App extends Component {
+  // const [users, setUsers] = useState([]);
+  // const [toastMessage, setToastMessage] = useState("");
   constructor(props){
     super(props);
     this.state = {
