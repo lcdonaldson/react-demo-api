@@ -1,4 +1,6 @@
-This project is a simple react app to be kind of a sandbox.
+
+
+
 
 ### Making a Progressive Web App
 
