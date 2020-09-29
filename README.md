@@ -1,3 +1,4 @@
 
 # React Demo API
-Simple Crud App
+
+Simple example API app
