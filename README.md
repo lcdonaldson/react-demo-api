@@ -1,4 +1,4 @@
 
 # React Demo API
 
-Simple example API app
+Simple example of an API app
